@@ -4,7 +4,7 @@ const ProtectAdminPanel = () => {
 
 const userInfo = {
     name : "Shahadat Hossain Shamim",
-    role : "Admin"
+    role : "admin"
 }
 
 if(userInfo){
