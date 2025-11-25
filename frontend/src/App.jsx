@@ -5,6 +5,7 @@ import AdminIndex from './adminPanel/pages/AdminIndex';
 import AllWriters from './adminPanel/pages/AllWriters';
 import Login from './adminPanel/pages/Login';
 import News from './adminPanel/pages/News';
+import Profile from './adminPanel/pages/Profile';
 import Unable from './adminPanel/pages/Unable';
 import ProtectAdminPanel from './middleware/ProtectAdminPanel';
 import ProtectRole from './middleware/ProtectRole';
@@ -21,6 +22,7 @@ const App = () => {
             <Route path='' element={<Navigate to='/adminPanel/admin'/>}></Route>
             <Route path='unable-access' element={<Unable/>}></Route>
             <Route path='news' element={<News/>}></Route>
+            <Route path='profile' element={<Profile/>}></Route>
             <Route path='' element={<ProtectRole role='admin'/>}>
               <Route path='admin' element={<AdminIndex/>}></Route>
               <Route path='writer/add' element={<AddWriters/>}></Route>
