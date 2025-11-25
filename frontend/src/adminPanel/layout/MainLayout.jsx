@@ -6,7 +6,7 @@ const MainLayout = () => {
   return (
     <div className=" min-w-screen min-h-screen bg-slate-300">
       <Sidebar/>
-      <div className="ml-[250px] min-h-[vh]">
+      <div className="ml-[250px] w-[calc(100%-260px)] min-h-screen">
         <Header />
         <div className="p-4">
           <div className="pt-[85px]">
@@ -14,8 +14,6 @@ const MainLayout = () => {
           </div>
         </div>
       </div>
-      
-      
     </div>
   )
 }
