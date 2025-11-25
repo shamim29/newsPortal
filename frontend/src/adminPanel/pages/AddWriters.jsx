@@ -4,8 +4,8 @@ const AddWriters = () => {
   return (
     <div className="bg-white rounded-md">
       <div className="flex justify-between p-4">
-        <h2 className="text-xl font-medium">New Writers Create</h2>
-          <Link to='/adminPanel/writers' className="px-3 py-1.5 bg-purple-500 rounded-sm text-white hover:bg-purple-800">Add Writers</Link>
+        <h2 className="text-xl font-medium">Create New Writers</h2>
+          <Link to='/adminPanel/writers' className="px-3 py-1.5 bg-purple-500 rounded-sm text-white hover:bg-purple-800">All Writers</Link>
       </div>
       <div className="p-4">
         <form>

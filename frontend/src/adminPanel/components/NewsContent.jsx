@@ -1,14 +1,17 @@
 import { FaRegEdit, FaTrashAlt } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa6";
+import { IoCaretBack, IoCaretForward } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import news1image from '../../assets/Vumikomppo.jpg';
+
+
 
 const NewsContent = () => {
   return (
     <div>
         <div className="px-4 py-3 flex gap-x-3">
             <select name="" id="" className="px-5 py-2 rounded-md outline-0 border border-gray-300
-         focus:border-blue-500 h-10">
+            focus:border-blue-500 h-10">
             <option value="">Select Type</option>
             <option value="pending">Pending</option>
             <option value="active">Active</option>
@@ -59,6 +62,24 @@ const NewsContent = () => {
                 </tbody>
             </table>
         </div>
+        <div className="flex items-center justify-end px-10 gap-x-3 text-slate-600">
+            <div className="flex gap-x-3 justify-center items-center">
+                <p className="px-4 py-3 font-semibold text-sm">News Per Page</p>
+                <select name="category" id="category" className="px-3 py-2 rounded-md outline-0 border border-gray-300
+              focus:border-blue-500 h-10">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+              </select>
+            </div>
+            <p className="px-6 py-3 font-semibold text-sm">10/122 - of 10</p>
+            <div className="flex items-center gap-x-3">
+                <IoCaretBack className="w-5 h-5 cursor-pointer"/>
+                <IoCaretForward className="w-5 h-5 cursor-pointer"/>
+            </div>
+        </div>
+
     </div>
   )
 }
