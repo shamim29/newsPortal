@@ -2,13 +2,13 @@ import { FaRegEdit, FaTrashAlt } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa6";
 import { IoCaretBack, IoCaretForward } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import news1image from '../../assets/Vumikomppo.jpg';
+import AdImage1 from '../../assets/iPhone7.jpg';
 
 
-const NewsContent = () => {
+const AdvertisementContent = () => {
   return (
     <div>
-        <div className="px-4 py-3 flex gap-x-3">
+      <div className="px-4 py-3 flex gap-x-3">
             <select name="" id="" className="px-5 py-2 rounded-md outline-0 border border-gray-300
             focus:border-blue-500 h-10">
             <option value="">Select Type</option>
@@ -16,7 +16,7 @@ const NewsContent = () => {
             <option value="active">Active</option>
             <option value="deactive">Deactive</option>
          </select>
-         <input type="text" placeholder="Search News" className="px-3 py-2 rounded-md outline-0 border border-gray-300
+         <input type="text" placeholder="Search Advertisement" className="px-3 py-2 rounded-md outline-0 border border-gray-300
          focus:border-blue-500 h-10"/>
         </div>
         <div className="relative overflow-x-auto p-4">
@@ -26,7 +26,7 @@ const NewsContent = () => {
                         <th className="px-6 py-3">No</th>
                         <th className="px-6 py-3">Title</th>
                         <th className="px-6 py-3">Image</th>
-                        <th className="px-6 py-3">Category</th>
+                        <th className="px-6 py-3">Company</th>
                         <th className="px-6 py-3">Description</th>
                         <th className="px-6 py-3">Date</th>
                         <th className="px-6 py-3">Status</th>
@@ -36,17 +36,17 @@ const NewsContent = () => {
                 <tbody>
                     <tr className="bg-white border-b">
                         <td className="px-6 py-4">1</td>
-                        <td className="px-6 py-4">ভূমিকম্পে ঢাকার বড় বিপদ স্পষ্ট হচ্ছে</td>
+                        <td className="px-6 py-4">Iphone 7</td>
                         <td className="px-6 py-4">
                             <img
                             className="w-10 h-10"
-                            src={news1image}
+                            src={AdImage1}
                             alt='BartaBuzz Logo'
                             />
                         </td>
-                        <td className="px-6 py-4">পরিবেশ</td>
-                        <td className="px-6 py-4">ভূমিকম্পে রাজধানী শহর ঢাকার বড় বিপদের ঝুঁকি আরও স্পষ্ট হচ্ছে</td>
-                        <td className="px-6 py-4">November 25, 2025</td>
+                        <td className="px-6 py-4">Iphone</td>
+                        <td className="px-6 py-4">কম দামে আইফোন কিনুন</td>
+                        <td className="px-6 py-4">November 26, 2025</td>
                         <td className="px-6 py-4">
                             <span className="px-2 py-1 bg-gray-100 text-gray-800 rounded-lg text-xs cursor-pointer">Active</span>
                         </td>
@@ -63,7 +63,7 @@ const NewsContent = () => {
         </div>
         <div className="flex items-center justify-end px-10 gap-x-3 text-slate-600">
             <div className="flex gap-x-3 justify-center items-center">
-                <p className="px-4 py-3 font-semibold text-sm">News Per Page</p>
+                <p className="px-4 py-3 font-semibold text-sm">Advertisement Per Page</p>
                 <select name="category" id="category" className="px-3 py-2 rounded-md outline-0 border border-gray-300
               focus:border-blue-500 h-10">
                     <option value="10">10</option>
@@ -82,4 +82,4 @@ const NewsContent = () => {
   )
 }
 
-export default NewsContent
+export default AdvertisementContent

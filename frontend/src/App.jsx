@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import MainLayout from './adminPanel/layout/MainLayout';
 import AddWriters from './adminPanel/pages/AddWriters';
 import AdminIndex from './adminPanel/pages/AdminIndex';
+import Advertisement from './adminPanel/pages/Advertisement';
 import AllWriters from './adminPanel/pages/AllWriters';
 import Login from './adminPanel/pages/Login';
 import News from './adminPanel/pages/News';
@@ -27,6 +28,7 @@ const App = () => {
               <Route path='admin' element={<AdminIndex/>}></Route>
               <Route path='writer/add' element={<AddWriters/>}></Route>
               <Route path='writers' element={<AllWriters/>}></Route>
+              <Route path='advertisement' element={<Advertisement/>}></Route>
             </Route>
           </Route> 
         </Route>
