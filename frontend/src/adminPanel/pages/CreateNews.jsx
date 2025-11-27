@@ -1,8 +1,13 @@
 import JoditEditor from "jodit-react";
+import { useState } from "react";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Gallery from "../components/Gallery";
 
 const CreateNews = () => {
+
+  const [show, setShow] = useState(false)
+
   return (
      <div className="bg-white rounded-md">
       <div className="flex justify-between p-4">
@@ -30,7 +35,7 @@ const CreateNews = () => {
             <div className="flex flex-col gap-y-2 mb-5">
               <div className="flex justify-start items-center gap-x-2">
                 <h2>Description</h2>
-                <div>
+                <div onClick={()=> setShow(true)}>
                   <span className="text-2xl cursor-pointer"><FaCloudUploadAlt /></span>
                 </div>
               </div>
@@ -43,6 +48,9 @@ const CreateNews = () => {
           </div>
         </form>
       </div>
+      {
+        show && <Gallery setShow={setShow} images={[]} />
+      }
     </div>
   )
 }
