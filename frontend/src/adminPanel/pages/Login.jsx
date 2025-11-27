@@ -1,7 +1,12 @@
+import axios from 'axios';
 import { useState } from 'react';
 import bartabuzzlogo from '../../assets/BartaBuzzD1.png';
+import { base_url } from '../../config/config';
 
 const Login = () => {
+
+  const [loader, setLoader] = useState(false)
+
   const [state, setState] = useState({
     email: "",
     password: ""
@@ -14,8 +19,15 @@ const Login = () => {
     });
   };
 
-  const submit = (e) => {
+  const submit = async(e) => {
     e.preventDefault();
+    try{
+      const {data} = await axios.post(`${base_url}/api/login`, state)
+      console.log(data)
+
+    } catch (error){
+      console.log(error)
+    }
     console.log(state);
   };
 
