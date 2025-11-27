@@ -36,7 +36,7 @@ const AddWriters = () => {
             </div>
             <div className="flex flex-col gap-y-2 mb-5">
               <label className="text-md font-medium text-gray-600" htmlFor="email">Email</label>
-              <input type="text" placeholder="Email Address" id="email" className="px-3 py-2 rounded-md outline-0 border border-gray-300
+              <input type="email" placeholder="Email Address" id="email" className="px-3 py-2 rounded-md outline-0 border border-gray-300
               focus:border-blue-500 h-10"/>
             </div>     
             <div className="flex flex-col gap-y-2 mb-5">

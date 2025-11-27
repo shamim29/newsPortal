@@ -1,5 +1,6 @@
 import { AiFillDashboard } from 'react-icons/ai';
-import { FaUserEdit } from "react-icons/fa";
+import { BiCategoryAlt } from "react-icons/bi";
+import { FaPlus, FaUserEdit } from "react-icons/fa";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { ImProfile } from "react-icons/im";
 import { IoPersonAdd } from "react-icons/io5";
@@ -8,9 +9,14 @@ import { Link, useLocation } from 'react-router-dom';
 import bartabuzzlogo from '../../assets/BartaBuzzD1.png';
 
 
+
 const Sidebar = () => {
 
   const {pathname} = useLocation()
+
+  const userInfo = {
+    role : 'admin'
+  }
 
   return (
     <div className="w-[250px] h-screen fixed left-0 top-0 bg-white">
@@ -25,7 +31,9 @@ const Sidebar = () => {
         </Link>
       </div>
       <ul className="px-3 flex flex-col gap-y-1 font-medium">
-        <li>
+        {
+          userInfo.role === 'admin' ? <>
+          <li>
           <Link
             to="/adminPanel/admin"
             className={`${pathname === '/adminPanel/admin'
@@ -41,16 +49,30 @@ const Sidebar = () => {
         </li>
         <li>
           <Link
-            to="/adminPanel/news"
-            className={`${pathname === '/adminPanel/news'
+            to="/adminPanel/news/create"
+            className={`${pathname === '/adminPanel/news/create'
             ? 'bg-blue-600 text-white'
             : 'bg-white text-[#404040F6]'
             } px-3 py-2 hover:shadow-lg hover:shadow-indigo-500/20 w-full rounded-sm flex gap-x-2 justify-start items-center hover:bg-blue-600 hover:text-white`}
             >
             <span className="text-xl">
-              <FaRegNewspaper />
+              <FaPlus />
             </span>
-            <span>News</span>
+            <span>Create News</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/adminPanel/category"
+            className={`${pathname === '/adminPanel/category'
+            ? 'bg-blue-600 text-white'
+            : 'bg-white text-[#404040F6]'
+            } px-3 py-2 hover:shadow-lg hover:shadow-indigo-500/20 w-full rounded-sm flex gap-x-2 justify-start items-center hover:bg-blue-600 hover:text-white`}
+            >
+            <span className="text-xl">
+              <BiCategoryAlt />
+            </span>
+            <span>Category</span>
           </Link>
         </li>
         <li>
@@ -95,7 +117,53 @@ const Sidebar = () => {
             <span>All Writers</span>
           </Link>
         </li>
+
+          </> : <>
+          <li>
+          <Link
+            to="/adminPanel/writer"
+            className={`${pathname === '/adminPanel/writer'
+            ? 'bg-blue-600 text-white'
+            : 'bg-white text-[#404040F6]'
+            } px-3 py-2 hover:shadow-lg hover:shadow-indigo-500/20 w-full rounded-sm flex gap-x-2 justify-start items-center hover:bg-blue-600 hover:text-white`}
+            >
+            <span className="text-xl">
+              <AiFillDashboard />
+            </span>
+            <span>Dashboard</span>
+          </Link>
+        </li>
+            <li>
+          <Link
+            to="/adminPanel/news/create"
+            className={`${pathname === '/adminPanel/news/create'
+            ? 'bg-blue-600 text-white'
+            : 'bg-white text-[#404040F6]'
+            } px-3 py-2 hover:shadow-lg hover:shadow-indigo-500/20 w-full rounded-sm flex gap-x-2 justify-start items-center hover:bg-blue-600 hover:text-white`}
+            >
+            <span className="text-xl">
+              <FaPlus />
+            </span>
+            <span>Create News</span>
+          </Link>
+        </li>
+          </>
+        }
         
+        <li>
+          <Link
+            to="/adminPanel/news"
+            className={`${pathname === '/adminPanel/news'
+            ? 'bg-blue-600 text-white'
+            : 'bg-white text-[#404040F6]'
+            } px-3 py-2 hover:shadow-lg hover:shadow-indigo-500/20 w-full rounded-sm flex gap-x-2 justify-start items-center hover:bg-blue-600 hover:text-white`}
+            >
+            <span className="text-xl">
+              <FaRegNewspaper />
+            </span>
+            <span>News</span>
+          </Link>
+        </li>
         <li>
           <Link
             to="/adminPanel/profile"
